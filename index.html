@@ -1,469 +1,530 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Invitación digital de boda de Heiner & Xochilt - 14 de Noviembre de 2026">
-    <title>Heiner & Xochilt | Nuestra Boda</title>
+
+    <title>Heiner & Xochilt | Una pequeña actualización</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- CSS Personalizado -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        :root {
+            --cream: #f8f4ec;
+            --sand: #eee7da;
+            --white: #fffdf9;
+
+            --gold: #b99a5d;
+            --gold-light: #d7bf88;
+
+            --text: #4a443d;
+            --text-light: #81786d;
+
+            --red: #9d4b4b;
+
+            --shadow: 0 15px 40px rgba(80, 65, 45, 0.12);
+
+            --font-script: 'Alex Brush', cursive;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-main: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 10% 20%, rgba(185, 154, 93, 0.08), transparent 25%),
+                radial-gradient(circle at 90% 80%, rgba(185, 154, 93, 0.08), transparent 25%),
+                var(--cream);
+
+            color: var(--text);
+            font-family: var(--font-main);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 100vh;
+            padding: 30px 20px;
+
+            overflow-x: hidden;
+        }
+
+        /* ==============================
+           DECORACIÓN DE FONDO
+        ============================== */
+
+        .decoration {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .flower {
+            position: fixed;
+            color: var(--gold-light);
+            opacity: 0.35;
+            font-size: 45px;
+        }
+
+        .flower-1 {
+            top: 8%;
+            left: 7%;
+            transform: rotate(-20deg);
+        }
+
+        .flower-2 {
+            top: 12%;
+            right: 8%;
+            transform: rotate(25deg);
+        }
+
+        .flower-3 {
+            bottom: 8%;
+            left: 9%;
+            transform: rotate(15deg);
+        }
+
+        .flower-4 {
+            bottom: 10%;
+            right: 7%;
+            transform: rotate(-15deg);
+        }
+
+        .heart {
+            position: fixed;
+            color: var(--gold-light);
+            opacity: 0.25;
+            font-size: 20px;
+        }
+
+        .heart-1 {
+            top: 30%;
+            left: 15%;
+        }
+
+        .heart-2 {
+            top: 35%;
+            right: 14%;
+        }
+
+        .heart-3 {
+            bottom: 25%;
+            left: 18%;
+        }
+
+        .heart-4 {
+            bottom: 30%;
+            right: 17%;
+        }
+
+        /* ==============================
+           CONTENEDOR PRINCIPAL
+        ============================== */
+
+        .page {
+            position: relative;
+            z-index: 2;
+
+            width: 100%;
+            max-width: 650px;
+
+            background: rgba(255, 253, 249, 0.96);
+
+            border: 1px solid rgba(185, 154, 93, 0.45);
+
+            padding: 60px 55px;
+
+            text-align: center;
+
+            box-shadow: var(--shadow);
+
+            border-radius: 4px;
+        }
+
+        /* ==============================
+           ORNAMENTO SUPERIOR
+        ============================== */
+
+        .ornament {
+            color: var(--gold);
+            font-size: 20px;
+            letter-spacing: 12px;
+            margin-bottom: 25px;
+        }
+
+        /* ==============================
+           MONOGRAMA
+        ============================== */
+
+        .monogram {
+            width: 85px;
+            height: 85px;
+
+            margin: 0 auto 25px;
+
+            border: 1px solid var(--gold);
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+
+            color: var(--gold);
+        }
+
+        .monogram::before {
+            content: "";
+            position: absolute;
+
+            width: 70px;
+            height: 70px;
+
+            border: 1px solid rgba(185, 154, 93, 0.35);
+
+            border-radius: 50%;
+        }
+
+        .monogram span {
+            font-family: var(--font-script);
+            font-size: 32px;
+            z-index: 2;
+        }
+
+        .monogram span:last-child {
+            margin-left: -5px;
+        }
+
+        /* ==============================
+           TEXTO
+        ============================== */
+
+        .small-title {
+            font-family: var(--font-serif);
+            font-size: 18px;
+
+            color: var(--gold);
+
+            letter-spacing: 2px;
+
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-family: var(--font-script);
+
+            font-size: clamp(3.2rem, 8vw, 5rem);
+
+            font-weight: 400;
+
+            color: var(--text);
+
+            line-height: 1.1;
+
+            margin-bottom: 25px;
+        }
+
+        .divider {
+            width: 90px;
+            height: 1px;
+
+            background: var(--gold);
+
+            margin: 0 auto 30px;
+
+            position: relative;
+        }
+
+        .divider::before {
+            content: "✦";
+
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+
+            background: var(--white);
+
+            padding: 0 12px;
+
+            color: var(--gold);
+
+            font-size: 13px;
+        }
+
+        .message {
+            font-family: var(--font-serif);
+
+            font-size: 21px;
+
+            line-height: 1.7;
+
+            color: var(--text);
+
+            margin-bottom: 20px;
+        }
+
+        .message-secondary {
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            color: var(--text-light);
+
+            max-width: 480px;
+
+            margin: 0 auto 35px;
+        }
+
+        /* ==============================
+           CORAZÓN
+        ============================== */
+
+        .heart-divider {
+            color: var(--red);
+
+            font-size: 20px;
+
+            margin: 20px 0;
+        }
+
+        /* ==============================
+           NOMBRES
+        ============================== */
+
+        .names {
+            font-family: var(--font-script);
+
+            font-size: 48px;
+
+            color: var(--gold);
+
+            margin-top: 20px;
+        }
+
+        .names span {
+            font-family: var(--font-serif);
+
+            font-size: 22px;
+
+            color: var(--text-light);
+
+            margin: 0 8px;
+        }
+
+        .date {
+            font-family: var(--font-main);
+
+            font-size: 11px;
+
+            letter-spacing: 4px;
+
+            color: var(--text-light);
+
+            margin-top: 8px;
+        }
+
+        /* ==============================
+           PIE
+        ============================== */
+
+        .footer {
+            margin-top: 40px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid rgba(185, 154, 93, 0.25);
+
+            font-size: 11px;
+
+            color: #a49b90;
+
+            letter-spacing: 0.5px;
+        }
+
+        /* ==============================
+           ANIMACIÓN
+        ============================== */
+
+        .page {
+            animation: appear 1s ease forwards;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ==============================
+           RESPONSIVE
+        ============================== */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 18px;
+            }
+
+            .page {
+                padding: 45px 25px;
+            }
+
+            .monogram {
+                width: 75px;
+                height: 75px;
+            }
+
+            h1 {
+                font-size: 3.4rem;
+            }
+
+            .message {
+                font-size: 19px;
+            }
+
+            .message-secondary {
+                font-size: 13px;
+            }
+
+            .names {
+                font-size: 42px;
+            }
+
+            .flower {
+                font-size: 30px;
+            }
+
+            .flower-1 {
+                left: 3%;
+            }
+
+            .flower-2 {
+                right: 3%;
+            }
+
+            .flower-3 {
+                left: 3%;
+            }
+
+            .flower-4 {
+                right: 3%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Contenedor para lluvia de pétalos / hojas -->
-    <div id="petals-container" aria-hidden="true"></div>
+    <!-- Decoración -->
+    <div class="decoration flower flower-1">❀</div>
+    <div class="decoration flower flower-2">❀</div>
+    <div class="decoration flower flower-3">❀</div>
+    <div class="decoration flower flower-4">❀</div>
 
-    <!-- Toast Notification para mensajes al usuario (ej. copiar cuenta bancaria) -->
-    <div id="toast" class="toast-notification">
-        <i class="fa-solid fa-check-circle"></i>
-        <span id="toast-message">Copiado al portapapeles</span>
-    </div>
+    <div class="decoration heart heart-1">♡</div>
+    <div class="decoration heart heart-2">♡</div>
+    <div class="decoration heart heart-3">♡</div>
+    <div class="decoration heart heart-4">♡</div>
 
-    <!-- ==========================================
-         PANTALLA DE BIENVENIDA CON SELLO DE CERA
-    =========================================== -->
-    <div id="welcome-screen">
-        <div class="envelope-wrapper">
-            <div class="envelope-card">
-                <div class="monogram-badge">H & X</div>
-                <p class="welcome-subtitle">Tenemos el honor de invitarte a celebrar</p>
-                <h1 class="welcome-title">Nuestra Boda</h1>
-                <div class="welcome-names">Heiner <span>&</span> Xochilt</div>
-                <p class="welcome-date">14 · NOVIEMBRE · 2026</p>
 
-                <!-- Botón Interactivo / Sello de Cera -->
-                <div class="wax-seal-wrapper">
-                    <button id="enter-button" class="wax-seal-btn" title="Haz clic para abrir la invitación">
-                        <div class="wax-seal-inner">
-                            <i class="fa-solid fa-envelope-open-text"></i>
-                            <span>Abrir</span>
-                        </div>
-                    </button>
-                    <p class="seal-hint">Presiona el sello para abrir</p>
-                </div>
-            </div>
+    <!-- Contenido principal -->
+    <main class="page">
+
+        <div class="ornament">
+            ✦ ✦ ✦
         </div>
-    </div>
 
-    <!-- ==========================================
-         REPRODUCTOR FLOTANTE DE MÚSICA
-    =========================================== -->
-    <audio id="background-music" loop>
-        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=romantic-wedding-piano-113643.mp3" type="audio/mpeg">
-    </audio>
 
-    <button id="music-button" class="music-floating-btn" aria-label="Controlar Música" title="Reproducir / Pausar Música">
-        <div class="music-icon-wrapper">
-            <i class="fa-solid fa-music"></i>
+        <!-- Monograma -->
+        <div class="monogram">
+            <span>H</span>
+            <span>X</span>
         </div>
-        <div class="music-waves">
-            <span></span><span></span><span></span>
+
+
+        <p class="small-title">
+            Una pequeña actualización
+        </p>
+
+
+        <h1>
+            ¡Gracias!
+        </h1>
+
+
+        <div class="divider"></div>
+
+
+        <p class="message">
+            Con mucho cariño queremos informarles que
+            <strong>los cupos para nuestra boda han sido completados.</strong>
+        </p>
+
+
+        <p class="message-secondary">
+            Agradecemos de corazón todo el cariño, los buenos deseos
+            y el interés en compartir con nosotros uno de los momentos
+            más especiales de nuestras vidas.
+        </p>
+
+
+        <div class="heart-divider">
+            ♥
         </div>
-    </button>
 
-    <!-- ==========================================
-         HERO PRINCIPAL
-    =========================================== -->
-    <header class="hero" id="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-frame">
-            <div class="hero-content reveal">
-                <div class="monogram-hero">H & X</div>
-                <p class="hero-subtitle">¡Nos casamos!</p>
-                <h1 class="hero-title">Heiner <span>&</span> Xochilt</h1>
-                <div class="divider-line">
-                    <span class="line"></span>
-                    <i class="fa-solid fa-heart"></i>
-                    <span class="line"></span>
-                </div>
-                <p class="hero-date"><i class="fa-regular fa-calendar-check"></i> 14 de Noviembre de 2026</p>
-                
-                <a href="#historia" class="scroll-down-btn">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </a>
-            </div>
+
+        <p class="message-secondary">
+            Para nosotros significa muchísimo saber que tantas personas
+            desean acompañarnos en este día tan importante.
+        </p>
+
+
+        <!-- Nombres -->
+        <div class="names">
+            Heiner <span>&</span> Xochilt
         </div>
-    </header>
 
-    <!-- ==========================================
-         NUESTRA HISTORIA
-    =========================================== -->
-    <section id="historia" class="section story-section">
-        <div class="container">
-            <div class="section-title reveal">
-                <p class="subtitle">Nuestra Historia</p>
-                <h2>El Comienzo de Nuestro Siempre</h2>
-                <div class="ornament-divider">✦</div>
-            </div>
 
-            <div class="story-grid">
-                <div class="story-image-card reveal-left">
-                    <div class="image-frame">
-                        <img id="story-image" src="img1.jpeg" alt="Heiner y Xochilt">
-                    </div>
-                </div>
-
-                <div class="story-text-card reveal-right">
-                    <div class="quote-box">
-                        <i class="fa-solid fa-quote-left quote-icon"></i>
-                        <p class="quote-text">
-                            "Hay historias que comienzan de la manera más inesperada y terminan convirtiéndose en el capítulo más bonito de nuestras vidas."
-                        </p>
-                    </div>
-                    <p class="story-paragraph">
-                        Después de compartir tantos momentos, risas, viajes y sueños, hemos decidido unir nuestras vidas para siempre y comenzar juntos esta hermosa aventura llamada matrimonio.
-                    </p>
-                    <p class="story-paragraph">
-                        Nos encantaría que nos acompañes en este día tan especial e inolvidable para nosotros.
-                    </p>
-                    <div class="signature">Heiner & Xochilt</div>
-                </div>
-            </div>
+        <div class="date">
+            14 · NOVIEMBRE · 2026
         </div>
-    </section>
 
-    <!-- ==========================================
-         CUENTA REGRESIVA
-    =========================================== -->
-    <section class="countdown-section" id="countdown-section">
-        <div class="countdown-overlay"></div>
-        <div class="container countdown-container reveal">
-            <div class="monogram-badge gold">14 · 11 · 2026</div>
-            <p class="subtitle white">Falta Muy Poco</p>
-            <h2>Para Nuestro Gran Día</h2>
-            <div class="ornament-divider white">✦</div>
 
-            <div id="countdown" class="countdown-grid">
-                <div class="countdown-card">
-                    <span id="days">00</span>
-                    <small>Días</small>
-                </div>
-                <div class="countdown-card">
-                    <span id="hours">00</span>
-                    <small>Horas</small>
-                </div>
-                <div class="countdown-card">
-                    <span id="minutes">00</span>
-                    <small>Minutos</small>
-                </div>
-                <div class="countdown-card">
-                    <span id="seconds">00</span>
-                    <small>Segundos</small>
-                </div>
-            </div>
+        <div class="footer">
+            Con amor, los novios ♡
         </div>
-    </section>
 
-    <!-- ==========================================
-         ITINERARIO DEL DÍA (TIMELINE)
-    =========================================== -->
-    <section class="section itinerary-section">
-        <div class="container">
-            <div class="section-title reveal">
-                <p class="subtitle">Cronograma</p>
-                <h2>Itinerario del Día</h2>
-                <div class="ornament-divider">✦</div>
-            </div>
+    </main>
 
-            <div class="timeline">
-                <div class="timeline-item reveal">
-                    <div class="timeline-icon">
-                        <i class="fa-solid fa-church"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="timeline-time">5:00 PM</span>
-                        <h3>Ceremonia Civil</h3>
-                        <p>Promesa de amor ante nuestros seres queridos.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-icon">
-                        <i class="fa-solid fa-champagne-glasses"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="timeline-time">6:00 PM</span>
-                        <h3>Brindis</h3>
-                        <p>Brindis de recepción y fotos con los invitados.</p>
-                    </div>
-                </div>
-
-                  <div class="timeline-item reveal">
-                    <div class="timeline-icon">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="timeline-time">6:30 PM</span>
-                        <h3>Primer Baile</h3>
-                        <p>Nuestro primer vals como esposos.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-icon">
-                        <i class="fa-solid fa-utensils"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="timeline-time">7:00 PM</span>
-                        <h3>Cena & Banquete</h3>
-                        <p>Momento gastronómico especial para celebrar juntos.</p>
-                    </div>
-                </div>
-
-              
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-icon">
-                        <i class="fa-solid fa-compact-disc"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="timeline-time">8:00 a 10:00 PM</span>
-                        <h3>¡Gran Fiesta!</h3>
-                        <p>Música, baile y diversión hasta que el cuerpo aguante.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
-         UBICACIÓN DE EVENTOS
-    =========================================== -->
-    <section class="section event-section" id="ubicacion">
-        <div class="container">
-            <div class="section-title reveal">
-                <p class="subtitle">Celebremos Juntos</p>
-                <h2>Dónde y Cuándo</h2>
-                <div class="ornament-divider">✦</div>
-            </div>
-
-            <div class="events-grid">
-                <!-- Tarjeta Ceremonia -->
-                <div class="event-card reveal-left">
-                    <div class="event-badge"><i class="fa-solid fa-church"></i></div>
-                    <h3>Ceremonia Civil</h3>
-                    <div class="event-info">
-                        <p class="event-date"><i class="fa-regular fa-calendar"></i> Sábado, 14 de Noviembre</p>
-                        <p class="event-time"><i class="fa-regular fa-clock"></i> 5:00 PM</p>
-                        <p class="event-place"><strong>Capriccio Eventos</strong></p>
-                        <p class="event-address">Km 16.8 carretera a Masaya, a mano derecha de importadora medica, dentro del residencial Sierras Doradass</p>
-                    </div>
-                    <div class="map-actions">
-                        <a href="https://maps.app.goo.gl/ueUb5wVdD8Z7h8vj8" target="_blank" class="btn btn-primary">
-                            <i class="fa-solid fa-map-location-dot"></i> Google Maps
-                        </a>
-                        <a href="https://ul.waze.com/ul?ll=12.02630911%2C-86.19529724&navigate=yes&zoom=14&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank" class="btn btn-secondary">
-                            <i class="fa-brands fa-waze"></i> Waze
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
-         GALERÍA DE MOMENTOS
-    =========================================== -->
-    <section class="section gallery-section">
-        <div class="container">
-            <div class="section-title reveal">
-                <p class="subtitle">Nuestros Recuerdos</p>
-                <h2>Momentos Inolvidables</h2>
-                <div class="ornament-divider">✦</div>
-            </div>
-
-            <div class="gallery-grid">
-                <div class="gallery-item gallery-large reveal-left">
-                    <img id="gallery-image-1" src="img2.jpeg" alt="Foto de los novios">
-                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
-                </div>
-                <div class="gallery-item reveal">
-                    <img id="gallery-image-2" src="img3.jpeg" alt="Foto de los novios">
-                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
-                </div>
-                <div class="gallery-item reveal-right">
-                    <img id="gallery-image-3" src="img4.jpeg" alt="Foto de los novios">
-                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
-                </div>
-                <div class="gallery-item reveal-left">
-                    <img id="gallery-image-4" src="img5.jpeg" alt="Foto de los novios">
-                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
-         CÓDIGO DE VESTIMENTA
-    =========================================== -->
-    <section class="dress-section">
-        <div class="container reveal">
-            <div class="dress-icon-wrapper">
-                <i class="fa-solid fa-user-tie"></i>
-                <i class="fa-solid fa-person-dress"></i>
-            </div>
-            <p class="subtitle">Código de Vestimenta</p>
-            <h2>Formal</h2>
-            <div class="ornament-divider">✦</div>
-            <p class="dress-description">
-                Queremos que luzcas espectacular en nuestra gran noche. Te invitamos a vestir con vestimenta formal para celebrar juntos.
-            </p>
-
-            <!-- Paleta de Colores Sugeridos / Reservados -->
-            <div class="color-palette-box">
-                <div class="palette-group">
-                    <p class="palette-label"><i class="fa-solid fa-ban"></i> Reservado para la Novia:</p>
-                    <div class="color-dots">
-                        <span class="color-dot" style="background: #ffffff;" title="Blanco"></span>
-                        <span class="color-dot" style="background: #fdfbf7;" title="Marfil / Ivory"></span>
-                        <span class="color-dot" style="background: #f5f0eb;" title="Beige Claro"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
-         MESA DE REGALOS & SOBRE DE REGALO
-    =========================================== -->
-    <section class="section gifts-section">
-        <div class="container">
-            <div class="section-title reveal">
-                <p class="subtitle">Un Detalle Especial</p>
-                <h2>Mesa de Regalos</h2>
-                <div class="ornament-divider">✦</div>
-            </div>
-
-            <div class="gift-intro reveal">
-                <div class="gift-icon-hero"><i class="fa-solid fa-gift"></i></div>
-                <p>
-                    Tu presencia es nuestro mejor regalo. Sin embargo, si deseas hacernos un detalle para nuestro nuevo hogar, ponemos a tu disposición la siguiente opción:
-                </p>
-            </div>
-
-            <div class="gift-cards-grid reveal">
-                <!-- Sobre de regalo / Cuenta Bancaria 
-                <div class="gift-card">
-                    <div class="gift-card-header">
-                        <i class="fa-solid fa-building-columns"></i>
-                        <h3>Transferencia Bancaria</h3>
-                    </div>
-                    <p class="gift-card-text">Para quienes prefieren apoyarnos en nuestro fondo de luna de miel o nuevo hogar:</p>
-                    <div class="bank-info-box">
-                        <p><strong>Banco:</strong> Banco Nacional</p>
-                        <p><strong>Titular:</strong> Heiner & Xochilt</p>
-                        <p><strong>CLABE / IBAN:</strong> <span id="bank-clabe">0123 4567 8901 2345 67</span></p>
-                        <button class="copy-btn" id="copy-bank-btn">
-                            <i class="fa-regular fa-copy"></i> Copiar Datos
-                        </button>
-                    </div>
-                </div> -->
-
-                <!-- Lluvia de Sobres -->
-                <div class="gift-card">
-                    <div class="gift-card-header">
-                        <i class="fa-solid fa-envelope-open-text"></i>
-                        <h3>Lluvia de Sobres</h3>
-                    </div>
-                    <p class="gift-card-text">
-                        Encontrarás un buzón especial el día de la recepción para depositar tu sobre con tus buenos deseos y aporte en efectivo.
-                    </p>
-                    <div class="envelope-illustration">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
-         CONFIRMACIÓN RSVP POR WHATSAPP
-    =========================================== -->
-    <section class="rsvp-section" id="rsvp">
-        <div class="container reveal">
-            <div class="rsvp-header">
-                <div class="heart-pulse"><i class="fa-solid fa-heart"></i></div>
-                <p class="subtitle white">Queremos Contar Contigo</p>
-                <h2>¿Nos Acompañas?</h2>
-                <div class="ornament-divider white">✦</div>
-                <p class="rsvp-deadline">Por favor confirma tu asistencia antes del <strong>16 de Octubre de 2026</strong>.</p>
-            </div>
-
-            <!-- Formulario RSVP Interactivo -->
-            <form id="rsvp-form" class="rsvp-card">
-                <div class="form-group">
-                    <label for="rsvp-name"><i class="fa-solid fa-user"></i> Nombre Completo</label>
-                    <input type="text" id="rsvp-name" placeholder="Ej. Juan Pérez y Acompañante" required>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="rsvp-attendance"><i class="fa-solid fa-circle-check"></i> Asistencia</label>
-                        <select id="rsvp-attendance" required>
-                            <option value="Sí asistiré">¡Sí, ahí estaré!</option>
-                            <option value="No podré asistir">Lamentablemente no podré</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="rsvp-guests"><i class="fa-solid fa-users"></i> Número de Pases</label>
-                        <select id="rsvp-guests">
-                            <option value="2" selected>3 Personas</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="rsvp-song"><i class="fa-solid fa-music"></i> ¿Qué canción no puede faltar en la fiesta?</label>
-                    <input type="text" id="rsvp-song" placeholder="Ej. La Chona - Los Tucanes">
-                </div>
-
-                <button type="submit" class="whatsapp-submit-btn">
-                    <i class="fa-brands fa-whatsapp"></i> Confirmar Asistencia por WhatsApp
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- ==========================================
-         FOOTER
-    =========================================== -->
-    <footer class="footer">
-        <div class="container footer-content reveal">
-            <div class="monogram-badge gold">H & X</div>
-            <p class="footer-thanks">Gracias por formar parte de nuestra historia de amor.</p>
-            <h2 class="footer-names">Heiner <span>&</span> Xochilt</h2>
-            <p class="footer-date">14 · 11 · 2026</p>
-            <div class="footer-hearts">
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-heart"></i>
-            </div>
-        </div>
-    </footer>
-
-    <!-- ==========================================
-         MODAL DE GALERÍA (LIGHTBOX)
-    =========================================== -->
-    <div id="image-modal" class="image-modal">
-        <button class="close-modal" aria-label="Cerrar Imagen">&times;</button>
-        <img id="modal-image" src="" alt="Imagen ampliada">
-    </div>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
 </body>
-
 </html>
