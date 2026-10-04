@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
             message += `\n¡Gracias por la invitación! ❤️`;
 
             // Número de WhatsApp (puedes reemplazar con el número real de los novios)
-            const phoneNumber = "50589234316"; 
+            const phoneNumber = "50585019486"; 
             const encodedMessage = encodeURIComponent(message);
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
