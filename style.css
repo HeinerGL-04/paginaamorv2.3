@@ -1432,3 +1432,30 @@ button, input, select {
         align-items: flex-start;
     }
 }
+
+
+@media (max-width: 600px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .gallery-item,
+    .gallery-large {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
+
+    .gallery-wide {
+        grid-column: span 1;
+    }
+}
